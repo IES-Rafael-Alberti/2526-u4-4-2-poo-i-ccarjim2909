@@ -63,5 +63,46 @@ fun main() {
     println("\nEjercicio 3 Persona")
     println("--------------------------------")
 
+
+
+
+    println("\nEjercicio 4 Coche")
+    println("--------------------------------")
+
+    println("creando coche no valido...")
+    try {
+        val coche1 = Coche("seat", "ibiza", 90, 5, "1234ABC", "Blanco")
+        println("Creado: $coche1")
+    } catch (e: IllegalArgumentException) {
+        println("Error: ${e.message}")
+    }
+
+    println("\ncreando coche no valido")
+    probarCoche("", "Ibiza", 100, 5, "1234ABC", "Rojo")
+
+    println("\ncreando coche inferior a 70 caballos")
+    probarCoche("Ford", "Focus", 50, 5, "1234ABC", "Azul")
+
+    println("\ncreando coche puertas incorrectas")
+    probarCoche("Renault", "Clio", 100, 2, "1234ABC", "Negro")
+
+    println("\ncreando coche matrícula incorrecta")
+    probarCoche("Audi", "A3", 150, 3, "123", "Gris")
+
+    println("\ninstanciar y modificar el color a un valor nulo")
+    try {
+        val cocheOk = Coche("Tesla", "Model 3", 300, 5, "9999XYZ", "Negro")
+        cocheOk.color = null
+    } catch (e: IllegalArgumentException) {
+        println("Error al modificar color: ${e.message}")
+    }
+
+
+
+    println("\nEjercicio 5 Tiempo")
+    println("--------------------------------")
+
+
+
 }
 
