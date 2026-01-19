@@ -1,16 +1,30 @@
 package org.iesra
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-fun main() {
-    val name = "Kotlin"
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    println("Hello, " + name + "!")
 
-    for (i in 1..5) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        println("i = $i")
+
+fun main() {
+
+    println("\nEjercicio Rectangulo")
+    println("--------------------------------")
+
+    val r1 = Rectangulo(5.0, 3.0)
+    val r2 = Rectangulo(10.0, 4.5)
+    val r3 = Rectangulo(2.0, 2.0)
+
+    val rectangulos = listOf(r1, r2, r3)
+
+    for (r in rectangulos) {
+        println(r)
+        println("Area: ${r.area()}")
+        println("Perímetro: ${r.perimetro()}")
+        println("\n")
     }
+
+    println("\nEjercicio Persona")
+    println("--------------------------------")
+
+
+
+
 }
+
